@@ -7,6 +7,7 @@ import AdminLogin from './Pages/AdminLogin/AdminLogin';
 import AdminCart from './Pages/AdminCart/AdminCart';
 import PendingOrders from './Pages/PendingOrders/PendingOrders';
 import CompletedOrders from './Pages/CompletedOrders/CompletedOrders';
+import OrderDetails from './Pages/OrderDetails/OrderDetails';
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
                 <Route path="cart-items" element={<AdminCart />} />
                 <Route path="pending-orders" element={<PendingOrders />} />
                 <Route path="completed-orders" element={<CompletedOrders />} />
+
+                <Route path="order-details/:orderId" element={<OrderDetails />} />
               </Routes>
             </PortalLayout>
           }
