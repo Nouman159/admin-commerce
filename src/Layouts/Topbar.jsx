@@ -2,14 +2,13 @@ import React, { Fragment, useState, useEffect } from 'react';
 import { HiMenuAlt2 } from "react-icons/hi";
 import { Popover, Transition } from "@headlessui/react";
 import { CiUser } from "react-icons/ci";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axiosInstance from '../axios';
 
 const Topbar = ({ showNav, setShowNav }) => {
     const [openMenu, setOpenMenu] = useState(false);
     const [sessionUser, setSessionUser] = useState(null);
     const navigate = useNavigate();
-    const location = useLocation();
 
     useEffect(() => {
         const adminId = localStorage.getItem('adminId');

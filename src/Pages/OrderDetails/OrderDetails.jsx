@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axiosInstance from '../../axios';
-// import Navbar from '../../Components/Navbar/Navbar';
 
 const OrderDetails = () => {
     const { orderId } = useParams();
@@ -38,7 +37,6 @@ const OrderDetails = () => {
 
     return (
         <>
-            {/* <Navbar /> */}
             <div className="container mx-auto p-4">
                 <h2 className="text-2xl font-semibold mb-4">Order Details</h2>
                 <div className="bg-white border border-gray-200 rounded-lg shadow-md p-4">

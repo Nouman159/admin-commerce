@@ -4,7 +4,6 @@ import PortalLayout from './Layouts/PortalLayout';
 import './App.css';
 import AdminDashboard from './Pages/AdminDashboard/AdminDashboard';
 import AdminLogin from './Pages/AdminLogin/AdminLogin';
-import AdminCart from './Pages/AdminCart/AdminCart';
 import PendingOrders from './Pages/PendingOrders/PendingOrders';
 import CompletedOrders from './Pages/CompletedOrders/CompletedOrders';
 import OrderDetails from './Pages/OrderDetails/OrderDetails';
@@ -21,7 +20,6 @@ function App() {
             <PortalLayout>
               <Routes>
                 <Route path="dashboard" element={<AdminDashboard />} />
-                {/* <Route path="cart-items" element={<AdminCart />} /> */}
                 <Route path="pending-orders" element={<PendingOrders />} />
                 <Route path="completed-orders" element={<CompletedOrders />} />
 

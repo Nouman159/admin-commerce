@@ -1,6 +1,6 @@
 import React, { forwardRef } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { Check, Ellipsis, ShoppingCart, User } from 'lucide-react';
+import { Check, Ellipsis, User } from 'lucide-react';
 
 const Sidebar = forwardRef(({ }, ref) => {
     const location = useLocation();

@@ -7,8 +7,8 @@ const PendingOrders = () => {
     const [orders, setOrders] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const [showModal, setShowModal] = useState(false); // Modal visibility
-    const [orderToComplete, setOrderToComplete] = useState(null); // Order ID to be marked complete
+    const [showModal, setShowModal] = useState(false);
+    const [orderToComplete, setOrderToComplete] = useState(null);
 
     useEffect(() => {
         const fetchPendingOrders = async () => {
@@ -43,18 +43,18 @@ const PendingOrders = () => {
         } catch (err) {
             alert('Failed to mark the order as complete.');
         } finally {
-            setShowModal(false); // Close the modal
+            setShowModal(false);
         }
     };
 
     const openModal = (orderId) => {
-        setOrderToComplete(orderId); // Store order ID
-        setShowModal(true); // Show modal
+        setOrderToComplete(orderId);
+        setShowModal(true);
     };
 
     const closeModal = () => {
-        setShowModal(false); // Close modal
-        setOrderToComplete(null); // Reset order ID
+        setShowModal(false);
+        setOrderToComplete(null);
     };
 
     if (loading) {
