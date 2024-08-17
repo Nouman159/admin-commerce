@@ -32,28 +32,7 @@ const Sidebar = forwardRef(({ }, ref) => {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-col mt-[1rem]">
-                <div
-                    onClick={() => {
-                        if (location.pathname !== "/admin/cart-items") {
-                            navigate("/admin/cart-items");
-                        }
-                    }}>
-                    <div
-                        className={`pl-7 py-3 mx-5 rounded text-center cursor-pointer mb-1 flex items-center transition-colors 
-                        ${location.pathname === "/admin/cart-items"
-                                ? "bg-white text-black"
-                                : "bg-black text-white font-[600] hover:bg-white hover:text-black"
-                            }`}>
-                        <div className="mr-2">
-                            <ShoppingCart className="h-5 w-5" />
-                        </div>
-                        <div>
-                            <p className="font-bold">Pending Carts</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
             <div className="flex flex-col mt-[1rem]">
                 <div
                     onClick={() => {

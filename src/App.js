@@ -21,7 +21,7 @@ function App() {
             <PortalLayout>
               <Routes>
                 <Route path="dashboard" element={<AdminDashboard />} />
-                <Route path="cart-items" element={<AdminCart />} />
+                {/* <Route path="cart-items" element={<AdminCart />} /> */}
                 <Route path="pending-orders" element={<PendingOrders />} />
                 <Route path="completed-orders" element={<CompletedOrders />} />
 

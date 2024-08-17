@@ -45,7 +45,7 @@ const AdminDashboard = () => {
                         <p className="text-3xl font-bold">{stats.addedToCartCount}</p>
                     </div>
                     <div className="bg-white border border-gray-200 rounded-lg shadow-md p-4">
-                        <h2 className="text-xl font-semibold mb-2">Payment Done</h2>
+                        <h2 className="text-xl font-semibold mb-2">Placed Orders</h2>
                         <p className="text-3xl font-bold">{stats.paymentDoneCount}</p>
                     </div>
                     <div className="bg-white border border-gray-200 rounded-lg shadow-md p-4">
