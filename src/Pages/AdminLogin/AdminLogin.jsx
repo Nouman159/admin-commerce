@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axiosInstance from '../../axios';
+import Cookie from 'js-cookie';
 
 const AdminLogin = () => {
     const navigate = useNavigate();
@@ -27,12 +28,12 @@ const AdminLogin = () => {
             }, { withCredentials: true });
 
             if (response.status === 200) {
+                Cookie.set('adminToken', response.data.adminToken)
                 const adminId = response.data.adminId;
                 localStorage.setItem('adminId', adminId);
                 navigate('/admin/dashboard');
             }
         } catch (error) {
-            console.log(error.response);
             if (error.response && error.response.data.errors) {
                 const backendErrors = {};
                 if (error.response.data.errors) {

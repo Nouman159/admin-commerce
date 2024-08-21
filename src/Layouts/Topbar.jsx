@@ -3,6 +3,7 @@ import { HiMenuAlt2 } from "react-icons/hi";
 import { Popover, Transition } from "@headlessui/react";
 import { CiUser } from "react-icons/ci";
 import { useNavigate } from "react-router-dom";
+import Cookies from 'js-cookie';
 import axiosInstance from '../axios';
 
 const Topbar = ({ showNav, setShowNav }) => {
@@ -24,6 +25,7 @@ const Topbar = ({ showNav, setShowNav }) => {
         try {
             const response = await axiosInstance.get('/admin/logout');
             if (response.status === 200) {
+                Cookies.remove('adminToken')
                 localStorage.removeItem('adminId');
                 setSessionUser(null);
                 navigate('/login');
